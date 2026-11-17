@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Physics Lab — CDI AP2</title>
+<!-- Estilos: base (Integrante 1) + estilos próprios de alguns módulos -->
+<link rel="stylesheet" href="base/base.css">
+<link rel="stylesheet" href="modulos/funcoes/funcoes.css">
+<link rel="stylesheet" href="modulos/limites/limites.css">
+<link rel="stylesheet" href="modulos/acessibilidade/acessibilidade.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="brand-logo"><span>∫</span></div>
+      <div>
+        <h1>Game Physics Lab</h1>
+        <p>Simulador de física para jogos com Cálculo Diferencial e Integral · Projeto AP2</p>
+      </div>
+    </div>
+    <!-- As abas são criadas automaticamente a partir dos módulos registrados (base/app.js) -->
+    <nav class="tabs" id="tabs" aria-label="Seções do laboratório"></nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ======================= INÍCIO ======================= -->
+<section class="view" id="v-inicio">
+  <div class="hero">
+    <h2>Toda mecânica de jogo é uma <span class="g">função</span>.</h2>
+    <p>Pulos, projéteis, barras de vida, itens flutuando e quedas com resistência do ar: este laboratório modela cada mecânica com Cálculo e mostra, com números verificáveis, como as quatro aulas da disciplina resolvem problemas reais de um game designer.</p>
+    <p><b style="color:var(--text)">Problema:</b> o designer precisa prever onde o projétil cai, quão rápido o personagem pode cair, como o HP escala por nível e quanta distância é percorrida — e precisa ter certeza de que as contas estão corretas.</p>
+  </div>
+  <!-- Um cartão para cada módulo registrado -->
+  <div class="grid-cards" id="home-cards" style="margin:20px 0"></div>
+</section>
+
+<!-- As seções dos módulos são inseridas aqui, antes da aba Testes -->
+
+<!-- ======================= TESTES ======================= -->
+<section class="view" id="v-testes" data-mod="t">
+  <div class="mod-head"><span class="mod-badge">VALIDAÇÃO</span><div>
+    <h2>Testes automatizados</h2>
+    <p>Cada módulo é conferido contra valores exatos conhecidos ou contra métodos numéricos independentes (derivada por diferença central, integral por Simpson). Também testamos o tratamento de entradas inválidas. Os mesmos testes rodam no terminal com <code>node tests/run-node.js</code>.</p>
+  </div></div>
+  <div class="card">
+    <div class="summary-bar"><span class="big" id="ts-count">–</span><span id="ts-pill"></span><button id="ts-run">Rodar testes novamente</button></div>
+    <div class="tbl-wrap" style="max-height:none"><table id="ts-table"></table></div>
+  </div>
+</section>
+</main>
+<footer>Projeto Final de CDI · AP2 · Engenharia de Software · UNICATÓLICA RN · 2026.2</footer>
+
+<!-- ===== Motor matemático ===== -->
+<script src="base/engine.js"></script>                          <!-- Integrante 1 -->
+<script src="modulos/limites/limites-engine.js"></script>       <!-- Integrante 2 -->
+<script src="modulos/derivadas/derivadas-engine.js"></script>   <!-- Integrante 3 -->
+<script src="modulos/integrais/integrais-engine.js"></script>   <!-- Integrante 4 -->
+
+<!-- ===== Base do site (Integrante 1) ===== -->
+<script src="base/mathview.js"></script>
+<script src="base/plot.js"></script>
+<script src="base/ui.js"></script>
+<script src="base/app.js"></script>
+<script src="base/props.js"></script>
+
+<!-- ===== Módulos (cada um se registra sozinho) ===== -->
+<script src="modulos/acessibilidade/acessibilidade.js"></script>  <!-- Integrante 4 -->
+<script src="modulos/funcoes/funcoes.js"></script>                <!-- Integrante 1 -->
+<script src="modulos/funcoes/funcoes-props.js"></script>
+<script src="modulos/limites/limites.js"></script>                <!-- Integrante 2 -->
+<script src="modulos/limites/limites-props.js"></script>
+<script src="modulos/derivadas/derivadas.js"></script>            <!-- Integrante 3 -->
+<script src="modulos/derivadas/derivadas-props.js"></script>
+<script src="modulos/integrais/integrais.js"></script>            <!-- Integrante 4 -->
+<script src="modulos/integrais/integrais-props.js"></script>
+
+<!-- ===== Testes ===== -->
+<script src="tests/runner.js"></script>            <!-- Integrante 1 -->
+<script src="tests/test-base.js"></script>         <!-- Integrante 1 -->
+<script src="tests/test-limites.js"></script>      <!-- Integrante 2 -->
+<script src="tests/test-derivadas.js"></script>    <!-- Integrante 3 -->
+<script src="tests/test-integrais.js"></script>    <!-- Integrante 4 -->
+</body>
+</html>

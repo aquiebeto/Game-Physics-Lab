@@ -1,0 +1,9 @@
+/* Estilos do módulo Funções (máquina de função) — Responsável: Integrante 1 */
+.machine-ctl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.machine { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 14px 0 6px; flex-wrap: wrap; }
+.m-io { background: #0d0f22; border: 1px solid var(--line); border-radius: 12px; padding: 8px 14px; text-align: center; min-width: 74px; }
+.m-io small { display: block; color: var(--muted); font-size: 0.7rem; text-transform: uppercase; }
+.m-io b { font: 800 1.3rem var(--mono); }
+.m-io.bad b { color: var(--bad); }
+.m-box { background: color-mix(in srgb, var(--mc) 18%, #0d0f22); border: 2px solid var(--mc); border-radius: 14px; padding: 14px 16px; font-family: "Cambria Math", Georgia, serif; font-size: 1.15rem; box-shadow: 0 0 22px color-mix(in srgb, var(--mc) 30%, transparent); }
+.m-arrow { font-size: 1.4rem; color: var(--mc); }
